@@ -1,0 +1,24 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C0C0C0"
+    tools:context=".MainActivity" >
+
+
+    <!--
+         Das folgende ImageView-Element zeigt eine Vektor-Grafik an!
+         Die Anzeige der Vektor-Grafik funktioniert auch schon in der
+         Vorschau des Layout-Designers!
+     -->
+
+    <ImageView android:id="@+id/imageview_vektorgrafik"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/description_vektorgrafik"
+        android:layout_margin="10dp"
+        android:background="#FFFFFF"
+        android:src="@drawable/vektorgrafik_dreieck" />
+
+</RelativeLayout>

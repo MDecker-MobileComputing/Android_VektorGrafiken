@@ -1,0 +1,20 @@
+<resources>
+
+    <string name="app_name">VektorGrafiken</string>
+
+    <string name="title_activity_main">Vektor-Grafik</string>
+
+    <string name="description_vektorgrafik">Hier wird eine Vektor-Grafik angezeigt</string>
+
+
+    <!-- Anzeige-Text für Menu-Item in der ActionBar -->
+    <string name="menu_item_info">Info</string>
+
+
+    <!-- Text für Info-Dialog, der durch Betätigung von Menu-Item in ActionBar angezeigt wird. -->
+    <string name="info_dialog_text">
+        Die von dieser App anzeigbaren Grafiken wurden als Vektor-Grafiken im SVG-Format definiert.
+        Diese <i>VectorDrawables</i> stehen erst seit Android 5.0 (API-Level 21) zur Verfügung.
+    </string>
+
+</resources>
