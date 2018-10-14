@@ -55,8 +55,7 @@ public class MainActivity extends Activity implements OnNavigationListener {
 
 
     /**
-     * Konfiguration der
-     * <a href="http://developer.android.com/guide/topics/ui/actionbar.html">ActionBar</a>.
+     * Konfiguration der {@link ActionBar}.
      * Die ActionBar wurde mit Android 3.0 (API-Level 11) eingeführt.
      * Sie ist in allen Activities verfügbar, die auf dem <i>Theme.Holo</i> basieren
      * und als <i>targetSDK</i> mindestens das API-Level 11 haben.
@@ -91,7 +90,7 @@ public class MainActivity extends Activity implements OnNavigationListener {
     /**
      * DropDown-Liste für die Navigation einrichten (siehe auch Wrox-Buch, S. 368ff).
      *
-     * @param actionBar ActionBar, für das die DropDown-Liste zur Navigation einzurichten ist.
+     * @param actionBar  ActionBar, für das die DropDown-Liste zur Navigation einzurichten ist.
      */
     protected void dropDownNavigationKonfigurieren(ActionBar actionBar)  {
 
@@ -118,7 +117,7 @@ public class MainActivity extends Activity implements OnNavigationListener {
 
 
     /**
-     * Event-Handler für Navigation über DropDown-Liste in ActionBar;
+     * Event-Handler-Methode für Navigation über DropDown-Liste in ActionBar;
      * wechselt je nach Auswahl die Drawables (Vektor-Grafiken) des
      * <i>ImageView</i>-Elements aus.
      * <br><br>
@@ -126,7 +125,9 @@ public class MainActivity extends Activity implements OnNavigationListener {
      * Überschreibt die einzige Methode aus dem Interface
      * {@link android.app.ActionBar.OnNavigationListener}.
      *
-     * @param itemPosition  Index von ausgewählten Eintrag in DropDown-Menü.
+     * @param itemPosition  Index (0-basiert) von ausgewählten Eintrag in DropDown-Menü.
+     *
+     * @param itemId  ID des ausgewählten Eintrages.
      *
      * @return Methode gibt genau dann <i>true</i> zurück, wenn die
      *         neue Auswahl verarbeitet werden konnte.
@@ -165,6 +166,8 @@ public class MainActivity extends Activity implements OnNavigationListener {
     /**
      * Hinzufügen von Menu-Items zur ActionBar.
      * Der zugehörige Event-Handler ist die Methode {{@link #onOptionsItemSelected(MenuItem)}.
+     *
+     * @param menu  Menü-Objekt
      */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
