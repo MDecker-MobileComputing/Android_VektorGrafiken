@@ -48,7 +48,7 @@ public class MainActivity extends Activity implements OnNavigationListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        _imageView = (ImageView) findViewById(R.id.imageview_vektorgrafik);
+        _imageView = findViewById(R.id.imageview_vektorgrafik);
 
         actionBarKonfigurieren();
     }
@@ -125,6 +125,7 @@ public class MainActivity extends Activity implements OnNavigationListener {
      * Überschreibt die einzige Methode aus dem Interface
      * {@link android.app.ActionBar.OnNavigationListener}.
      *
+     *
      * @param itemPosition  Index (0-basiert) von ausgewählten Eintrag in DropDown-Menü.
      *
      * @param itemId  ID des ausgewählten Eintrages.
@@ -174,6 +175,7 @@ public class MainActivity extends Activity implements OnNavigationListener {
 
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.action_bar_menu_items, menu); // Menü-Definition aus Ressourcen-Datei "aufblasen"
+
         return super.onCreateOptionsMenu(menu);
     }
 

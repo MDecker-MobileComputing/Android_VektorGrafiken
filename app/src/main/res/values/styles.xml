@@ -1,8 +1,11 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <!--
+         NICHT parent="android:Theme.Holo.Light.DarkActionBar", weil
+         sonst bei geöffneter Drop-Down-Liste die Einträge nicht
+         lesbar sind (Hintergrund- und Fordergrundfarbe fast gleich).
+      -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light">
     </style>
 
 </resources>
