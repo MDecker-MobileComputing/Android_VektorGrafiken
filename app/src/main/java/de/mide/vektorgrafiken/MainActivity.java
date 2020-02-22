@@ -73,6 +73,7 @@ public class MainActivity extends Activity implements OnNavigationListener {
 
         ActionBar actionBar = getActionBar();
         if (actionBar == null) {
+
             Toast.makeText(this, "Keine ActionBar vorhanden.", Toast.LENGTH_LONG).show();
             return;
         }
@@ -138,6 +139,7 @@ public class MainActivity extends Activity implements OnNavigationListener {
     public boolean onNavigationItemSelected(int itemPosition, long itemId) {
 
         if (_imageView == null) {
+            
             Log.e(TAG4LOGGING, "ImageView ist noch nicht initialisiert, kann kein Drawable setzen.");
             return false;
         }
