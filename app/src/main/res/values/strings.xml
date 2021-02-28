@@ -12,8 +12,8 @@
 
 
     <!-- Text für Info-Dialog, der durch Betätigung von Menu-Item in ActionBar angezeigt wird. -->
-    <string name="info_dialog_text">
-        Die von dieser App anzeigbaren Grafiken wurden als Vektor-Grafiken im SVG-Format definiert.
+    <string name="info_dialog_text">Die von dieser App anzeigbaren Grafiken wurden als
+        Vektor-Grafiken im SVG-Format definiert.
         Diese <i>VectorDrawables</i> stehen erst seit Android 5.0 (API-Level 21) zur Verfügung.
     </string>
 

@@ -31,10 +31,8 @@ import android.widget.Toast;
 @SuppressWarnings("deprecation")
 public class MainActivity extends Activity implements OnNavigationListener {
 
-
     /** Tag für Log-Messages der ganzen App. */
     public static final String TAG4LOGGING = "VektorGrafikDemo";
-
 
     /** UI-Element zur Darstellung der Vektor-Grafiken (VectorDrawables). */
     protected ImageView _imageView = null;
@@ -139,7 +137,7 @@ public class MainActivity extends Activity implements OnNavigationListener {
     public boolean onNavigationItemSelected(int itemPosition, long itemId) {
 
         if (_imageView == null) {
-            
+
             Log.e(TAG4LOGGING, "ImageView ist noch nicht initialisiert, kann kein Drawable setzen.");
             return false;
         }
