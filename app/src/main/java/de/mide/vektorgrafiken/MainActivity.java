@@ -125,7 +125,6 @@ public class MainActivity extends Activity implements OnNavigationListener {
      * Überschreibt die einzige Methode aus dem Interface
      * {@link android.app.ActionBar.OnNavigationListener}.
      *
-     *
      * @param itemPosition  Index (0-basiert) von ausgewählten Eintrag in DropDown-Menü.
      *
      * @param itemId  ID des ausgewählten Eintrages.
@@ -141,7 +140,6 @@ public class MainActivity extends Activity implements OnNavigationListener {
             Log.e(TAG4LOGGING, "ImageView ist noch nicht initialisiert, kann kein Drawable setzen.");
             return false;
         }
-
 
         // Auswerten des neu ausgewählten Eintrags in der DropDown-Liste
         switch (itemPosition) {
@@ -199,9 +197,11 @@ public class MainActivity extends Activity implements OnNavigationListener {
             zeigeInfoDialog();
             return true;
 
-        } else
+        } else {
+
             return super.onOptionsItemSelected(item);
-        // ggf. Verarbeitung von Menu-Item, das vom System hinzufügt wurde, verarbeiten.
+            // ggf. Verarbeitung von Menu-Item, das vom System hinzufügt wurde, verarbeiten.
+        }
     }
 
 
