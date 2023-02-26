@@ -1,7 +1,8 @@
-# Android-App "Vektor-Grafiken"
+# Android-App "Vektor-Grafiken" #
 
-App demonstrates usage of **Vector Graphics** in Android. *Vector Graphics* are composed of geometrics shapes
-(e.g. circles, lines, rectangles) and therefore they can be rendered at any size without loss of quality.
+App demonstrates usage of **Vector Graphics** in Android. *Vector Graphics* are composed of geometrics 
+shapes (e.g., circles, lines, rectangles) and therefore they can be rendered at any size without loss 
+of quality.
 
 <br>
 
@@ -10,7 +11,8 @@ Identifiers (names for classes, variables and methods), (JavaDoc) comments and U
 <br>
 
 ----
-## Screenshots
+
+## Screenshots ##
 
 ![Screenshot 1](screenshot_1.png)  
 
@@ -22,6 +24,6 @@ Identifiers (names for classes, variables and methods), (JavaDoc) comments and U
 <br>
 
 ----
-# License
+## License ##
 
 See the [LICENSE file](LICENSE.md) for license rights and limitations (BSD 3-Clause License).

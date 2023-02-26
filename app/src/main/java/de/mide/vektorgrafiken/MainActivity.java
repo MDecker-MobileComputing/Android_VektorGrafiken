@@ -2,9 +2,8 @@ package de.mide.vektorgrafiken;
 
 import java.util.ArrayList;
 
-import android.app.ActionBar;
 import android.app.ActionBar.OnNavigationListener;
-import android.app.Activity;
+
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
@@ -13,9 +12,11 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 
 
 /**
@@ -28,8 +29,7 @@ import android.widget.Toast;
  *
  * This project is licensed under the terms of the BSD 3-Clause License.
  */
-@SuppressWarnings("deprecation")
-public class MainActivity extends Activity implements OnNavigationListener {
+public class MainActivity extends AppCompatActivity implements OnNavigationListener {
 
     /** Tag für Log-Messages der ganzen App. */
     public static final String TAG4LOGGING = "VektorGrafikDemo";
@@ -69,7 +69,7 @@ public class MainActivity extends Activity implements OnNavigationListener {
      */
     protected void actionBarKonfigurieren() {
 
-        ActionBar actionBar = getActionBar();
+        ActionBar actionBar = getSupportActionBar();
         if (actionBar == null) {
 
             Toast.makeText(this, "Keine ActionBar vorhanden.", Toast.LENGTH_LONG).show();
@@ -80,39 +80,8 @@ public class MainActivity extends Activity implements OnNavigationListener {
         actionBar.setTitle   ( "Vektor-Grafiken"         );
         actionBar.setSubtitle( "Demo für VectorDrawable" );
 
-        dropDownNavigationKonfigurieren(actionBar);
-
         actionBar.setDisplayOptions(0, ActionBar.DISPLAY_SHOW_HOME); // Logo/Icon ausblenden
         //actionBar.hide();
-    }
-
-
-    /**
-     * DropDown-Liste für die Navigation einrichten (siehe auch Wrox-Buch, S. 368ff).
-     *
-     * @param actionBar  ActionBar, für das die DropDown-Liste zur Navigation einzurichten ist.
-     */
-    protected void dropDownNavigationKonfigurieren(ActionBar actionBar)  {
-
-        // Vorbereitung: Liste mit Optionen in der DropDown-Liste aufbauen
-        ArrayList<CharSequence> arrayList = new ArrayList<CharSequence>();
-        arrayList.add( "Kreis"      ); // Index=0
-        arrayList.add( "Diagonalen" ); // Index=1
-        arrayList.add( "Dreieck"    ); // Index=2
-
-
-        ArrayAdapter<CharSequence> arrayAdapter =
-                new ArrayAdapter<CharSequence>(getActionBar().getThemedContext(),
-                        android.R.layout.simple_dropdown_item_1line,
-                        arrayList);
-        // Als erstes Argument für den ArrayAdapter wird statt "this" für den Context
-        // der "Themed Context" der ActionBar verwendet, damit die Schrift in der
-        // Dropdown-Liste gut lesbar ist. Siehe auch: http://stackoverflow.com/a/20790346/1364368
-
-
-        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
-        actionBar.setListNavigationCallbacks(arrayAdapter, this);
-        // "this" weil diese Activity das Interface OnNavigationListener implementiert
     }
 
 
@@ -192,16 +161,22 @@ public class MainActivity extends Activity implements OnNavigationListener {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        if (item.getItemId() == R.id.action_info) {
+        switch (item.getItemId()) {
 
-            zeigeInfoDialog();
-            return true;
+            case R.id.action_kreis:
+                _imageView.setImageResource(R.drawable.vektorgrafik_kreis);
+                return true;
 
-        } else {
+            case R.id.action_diagonale:
+                _imageView.setImageResource(R.drawable.vektorgrafik_linien);
+                return true;
 
-            return super.onOptionsItemSelected(item);
-            // ggf. Verarbeitung von Menu-Item, das vom System hinzufügt wurde, verarbeiten.
+            case R.id.action_dreieck:
+                _imageView.setImageResource(R.drawable.vektorgrafik_dreieck);
+                return true;
         }
+
+        return super.onOptionsItemSelected(item);
     }
 
 
