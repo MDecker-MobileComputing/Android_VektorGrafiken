@@ -29,7 +29,7 @@ import androidx.appcompat.app.AppCompatActivity;
  *
  * This project is licensed under the terms of the BSD 3-Clause License.
  */
-public class MainActivity extends AppCompatActivity implements OnNavigationListener {
+public class MainActivity extends AppCompatActivity  {
 
     /** Tag für Log-Messages der ganzen App. */
     public static final String TAG4LOGGING = "VektorGrafikDemo";
@@ -82,53 +82,6 @@ public class MainActivity extends AppCompatActivity implements OnNavigationListe
 
         actionBar.setDisplayOptions(0, ActionBar.DISPLAY_SHOW_HOME); // Logo/Icon ausblenden
         //actionBar.hide();
-    }
-
-
-    /**
-     * Event-Handler-Methode für Navigation über DropDown-Liste in ActionBar;
-     * wechselt je nach Auswahl die Drawables (Vektor-Grafiken) des
-     * <i>ImageView</i>-Elements aus.
-     * <br><br>
-     *
-     * Überschreibt die einzige Methode aus dem Interface
-     * {@link android.app.ActionBar.OnNavigationListener}.
-     *
-     * @param itemPosition  Index (0-basiert) von ausgewählten Eintrag in DropDown-Menü.
-     *
-     * @param itemId  ID des ausgewählten Eintrages.
-     *
-     * @return Methode gibt genau dann <i>true</i> zurück, wenn die
-     *         neue Auswahl verarbeitet werden konnte.
-     */
-    @Override
-    public boolean onNavigationItemSelected(int itemPosition, long itemId) {
-
-        if (_imageView == null) {
-
-            Log.e(TAG4LOGGING, "ImageView ist noch nicht initialisiert, kann kein Drawable setzen.");
-            return false;
-        }
-
-        // Auswerten des neu ausgewählten Eintrags in der DropDown-Liste
-        switch (itemPosition) {
-
-            case 0:
-                _imageView.setImageResource(R.drawable.vektorgrafik_kreis);
-                return true;
-
-            case 1:
-                _imageView.setImageResource(R.drawable.vektorgrafik_linien);
-                return true;
-
-            case 2:
-                _imageView.setImageResource(R.drawable.vektorgrafik_dreieck);
-                return true;
-
-            default:
-                Log.e(TAG4LOGGING, "Unbekannter Index für Auswahl der Grafik: " + itemPosition);
-                return false;
-        }
     }
 
 
