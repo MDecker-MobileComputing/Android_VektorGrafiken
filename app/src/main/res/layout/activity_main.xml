@@ -19,6 +19,6 @@
         android:contentDescription="@string/description_vektorgrafik"
         android:layout_margin="10dp"
         android:background="#FFFFFF"
-        android:src="@drawable/vektorgrafik_dreieck" />
+        android:src="@drawable/vektorgrafik_kreis" />
 
 </RelativeLayout>
