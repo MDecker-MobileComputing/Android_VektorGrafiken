@@ -114,19 +114,22 @@ public class MainActivity extends AppCompatActivity  {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        switch (item.getItemId()) {
+        int itemId = item.getItemId();
 
-            case R.id.action_kreis:
-                _imageView.setImageResource(R.drawable.vektorgrafik_kreis);
-                return true;
+        if (itemId == R.id.action_kreis) {
 
-            case R.id.action_diagonale:
-                _imageView.setImageResource(R.drawable.vektorgrafik_linien);
-                return true;
+            _imageView.setImageResource(R.drawable.vektorgrafik_kreis);
+            return true;
 
-            case R.id.action_dreieck:
-                _imageView.setImageResource(R.drawable.vektorgrafik_dreieck);
-                return true;
+        } else if (itemId == R.id.action_diagonale) {
+
+            _imageView.setImageResource(R.drawable.vektorgrafik_linien);
+            return true;
+
+        } else if (itemId == R.id.action_dreieck) {
+
+            _imageView.setImageResource(R.drawable.vektorgrafik_dreieck);
+            return true;
         }
 
         return super.onOptionsItemSelected(item);
